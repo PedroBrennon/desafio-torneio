@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Torneio.Web.Models.TimeViewModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="text-align:center">Times Participantes</h2>
+
+<p>
+    @Html.ActionLink("Adicionar time", "Create", "Time", new { @class = "btn btn-primary" })
+</p>
+<table class="table" align="center">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.ActionLink("Atualizar", "Edit", "Time", new { id = item.Id }, new { @class = "btn btn-info" })
+            @Html.ActionLink("Ver detalhes", "Details", "Time", new { id = item.Id }, new { @class = "btn btn-warning" })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,32 @@
+﻿@model Torneio.Web.Models.TimeViewModel
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Excluir time</h2>
+
+<h3>Tem certeza que deseja retirar o time do torneio?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Excluir time" class="btn btn-danger" />
+        @Html.ActionLink("Voltar", "Index", "Time", new { @class = "btn btn-default" })
+    </div>
+    }
+</div>

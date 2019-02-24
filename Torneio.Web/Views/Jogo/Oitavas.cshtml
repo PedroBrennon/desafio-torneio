@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Torneio.Web.Models.JogoViewModel>
+
+@{
+    ViewBag.Title = "Oitavas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="text-align:center">Oitavas</h2>
+
+<p style="text-align:center;">
+    @Html.ActionLink("Últimos Jogos", "Index", "Jogo", new { @class = "btn btn-success" })
+    @Html.ActionLink("Oitavas", "Oitavas", "Jogo", new { @class = "btn btn-success" })
+    @Html.ActionLink("Quartas", "Quartas", "Jogo", new { @class = "btn btn-success" })
+    @Html.ActionLink("Semifinal", "Semifinal", "Jogo", new { @class = "btn btn-success" })
+    @Html.ActionLink("Final", "Final", "Jogo", new { @class = "btn btn-success" })
+</p>
+
+
+<table class="table" align="center">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NumPartida)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataDaPartida)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Chave)
+        </th>
+        <th>
+            @Html.DisplayName("Casa X Fora")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Terminou)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumPartida)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataDaPartida)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Chave)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameTimeId1) x @Html.DisplayFor(modelItem => item.NameTimeId2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Terminou)
+        </td>
+        <td>
+            @Html.ActionLink("Atualizar", "Edit", "Jogo", new { id = item.Id }, new { @class = "btn btn-info" })
+            @Html.ActionLink("Ver detalhes", "Details", "Jogo", new { id = item.Id }, new { @class = "btn btn-warning" })
+        </td>
+    </tr>
+    }
+
+</table>

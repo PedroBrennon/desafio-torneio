@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Torneio.Web", "Torneio.Web\Torneio.Web.csproj", "{2745C8C9-BBE5-4C01-BC79-8A0C0256B865}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Torneio.API", "Torneio.API\Torneio.API.csproj", "{47697125-5CD9-484A-B6AB-4513BD6CB647}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2745C8C9-BBE5-4C01-BC79-8A0C0256B865}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2745C8C9-BBE5-4C01-BC79-8A0C0256B865}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2745C8C9-BBE5-4C01-BC79-8A0C0256B865}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2745C8C9-BBE5-4C01-BC79-8A0C0256B865}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47697125-5CD9-484A-B6AB-4513BD6CB647}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47697125-5CD9-484A-B6AB-4513BD6CB647}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47697125-5CD9-484A-B6AB-4513BD6CB647}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47697125-5CD9-484A-B6AB-4513BD6CB647}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {074D18E5-2AD3-4B6E-9DC4-F7438057F760}
+	EndGlobalSection
+EndGlobal

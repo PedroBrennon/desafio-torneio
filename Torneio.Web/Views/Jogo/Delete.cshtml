@@ -1,0 +1,80 @@
+﻿@model Torneio.Web.Models.JogoViewModel
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Excluir Jogo</h2>
+
+<h3>Tem certeza que deseja excluir o jogo?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NumPartida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumPartida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataDaPartida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataDaPartida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Chave)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Chave)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameTimeId1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameTimeId1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameTimeId2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameTimeId2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GolsTimeId1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GolsTimeId1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GolsTimeId2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GolsTimeId2)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Excluir Jogo" class="btn btn-danger" />
+        @Html.ActionLink("Voltar", "Index", "Jogo", new { @class = "btn btn-default" })
+    </div>
+    }
+</div>

@@ -1,0 +1,54 @@
+﻿@model Torneio.Web.Models.JogoViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        @Html.HiddenFor(model => model.NumPartida)
+        @Html.HiddenFor(model => model.TimeId1)
+        @Html.HiddenFor(model => model.TimeId2)
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataDaPartida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataDaPartida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Chave)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Chave)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameTimeId1) x @Html.DisplayNameFor(model => model.NameTimeId2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameTimeId1) x @Html.DisplayFor(model => model.NameTimeId2)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Placar")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GolsTimeId1) x @Html.DisplayFor(model => model.GolsTimeId2)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Atualizar Jogo", "Edit", "Jogo", new { id = Model.Id }, new { @class = "btn btn-info"})
+    @Html.ActionLink("Voltar", "Index", "Jogo", new { @class = "btn btn-default" })
+</p>

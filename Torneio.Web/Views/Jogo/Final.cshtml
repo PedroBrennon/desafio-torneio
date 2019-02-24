@@ -1,0 +1,60 @@
+﻿@model Torneio.Web.Models.JogoViewModel
+
+@{
+    ViewBag.Title = "Final";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="text-align:center">Final</h2>
+
+<p style="text-align:center;">
+    @Html.ActionLink("Últimos Jogos", "Index", "Jogo", new { @class = "btn btn-success" })
+    @Html.ActionLink("Oitavas", "Oitavas", "Jogo", new { @class = "btn btn-success" })
+    @Html.ActionLink("Quartas", "Quartas", "Jogo", new { @class = "btn btn-success" })
+    @Html.ActionLink("Semifinal", "Semifinal", "Jogo", new { @class = "btn btn-success" })
+    @Html.ActionLink("Final", "Final", "Jogo", new { @class = "btn btn-success" })
+</p>
+
+<table class="table" align="center">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NumPartida)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataDaPartida)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Chave)
+        </th>
+        <th>
+            @Html.DisplayName("Casa X Fora")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Terminou)
+        </th>
+        <th></th>
+    </tr>
+
+    <tr>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.NumPartida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.DataDaPartida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.Chave)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.NameTimeId1) x @Html.DisplayFor(modelItem => modelItem.NameTimeId2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.Terminou)
+            </td>
+            <td>
+                @Html.ActionLink("Atualizar", "Edit", "Jogo", new { id = Model.Id }, new { @class = "btn btn-info" })
+                @Html.ActionLink("Ver detalhes", "Details", "Jogo", new { id = item.Id }, new { @class = "btn btn-warning" })
+            </td>
+    </tr>
+
+</table>
